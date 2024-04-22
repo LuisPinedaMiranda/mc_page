@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> AdonisJS - A fully featured web framework for Node.js </title>
+  @vite(['resources/css/app.css', 'resources/js/app.js'])
+  <!--AOS animations-->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!---->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anek+Gujarati&family=Fira+Sans:wght@300&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <style>
+    /* Estilo personalizado para el carrusel */
+    #carouselExampleIndicators .carousel-item img{
+     object-fit: contain;
+     object-position:center; /* Centrar la imagen en la parte superior */
+    width: 100%;
+    
+    }
+
+    #carouselExampleIndicators .carousel-item div{
+     margin: auto;
+     width: 100%;
+     width:1380px; 
+     height:800px;
+    }
+
+
+     /* Estilo para el logo */
+     .navbar-brand img {
+      margin-left: 100px;
+      max-width: 180px; /* ajusta el tamaño del logo según lo necesites */
+      height: 90px;
+      /*border: 2px red solid;*/
+
+    }
+
+    /* Ajuste de z-index para el carrusel */
+    #carouselExampleIndicators {
+      margin-top: 120px; /* Espacio superior para evitar que se tape con la barra de navegación */
+    }
+
+    /* Estilo para la barra de navegación */
+    .navbar {
+      background-color: #fb8c00; /* Cambia este color a tu color personalizado */
+    }
+
+    .navbar a {
+      color:black; 
+      font-weight:bold; 
+      font-size:18px;  
+      font-family: "Poppins", sans-serif;
+    }
+
+    /*Todo de las cards*/
+    .profile-area{
+      padding: 10px 0;
+    }
+
+    .card{
+      box-shadow: 0 0 30px rgba(0,0,0,5);
+      overflow: hidden;
+      border-radius: 15px;
+
+    }
+    
+    .img1 img{
+      height: 200px;
+      border-top right radius: 15px;
+      border-top left radius: 15px;
+      width:100%;
+    }
+
+    .img2 img{
+      position: relative;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      z-index: 1;
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      border: 7px solid #fff;
+
+    }
+
+    .card:hover .img2 img{
+      border-color:orange;
+      transition: .7s;
+    }
+
+    .main-text{
+      padding: 10px 0;
+      text-align: center;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .main-text h2{
+      text-transform: uppercase;
+      font-weight: 900;
+      font-size: 20px;
+      font-family: 'Roboto', sans-serif;
+      margin: 0 0 20px;
+    }
+
+
+  /*Para efecto de enfoque de las cards*/  
+    .card {
+    margin: 0 5px; /* Margen horizontal para las tarjetas */
+    transition: transform 0.3s ease-in-out; /* Transición suave para el efecto de enfoque */
+  }
+
+  .card:hover {
+    transform: scale(1.05); /* Aumentar el tamaño de la tarjeta al pasar el mouse */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Agregar una sombra para el efecto de enfoque */
+  }
+
+
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg  fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand me-auto" href="#">
+        <img src="/assets/img/mc_log.png" alt="Logo Movimiento Ciudadano">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link  mx-lg-2" aria-current="page" href="#" >Propuesta</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="#">Campaña</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="#">Partido</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="/planilla">Planilla</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="#">Apoyos</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+
+  <!--CAROUSEL -->
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000" data-bs-wrap="true">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="/assets/img/portada_mc.jpg" class="d-block" alt="..." style="height:700px;">
+      </div>
+      <div class="carousel-item">
+        <img src="/assets/img/flyer_mc.jpg" class="d-block w-100" style="height:800px">
+      </div>
+      <div class="carousel-item">
+        <img src="/assets/img/portada_mc.jpg" class="d-block w-100" alt="..." style="height:800px">
+      </div>
+      <div class="carousel-item">
+        <div style="background-color:cadetblue;">CUATRO</div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span> 
+    </button>
+  </div>
+
+ <!-- <div class="container-fluid d-flex justify-content-center" style="margin-top:350px">
+    <img src="/assets/img/movimiento2.jpeg" alt="" class="img-fluid">
+  </div>-->
+
+  <div class="row g-0 bg-body-secondary position-relative" style="margin-top:180px" data-aos="zoom-out-down" data-aos-duration="3000">
+    <div class="col-md-6 mb-md-0 p-md-4">
+      <img src="/assets/img/movimiento2.jpeg" class="w-100" alt="...">
+    </div>
+    <div class="col-md-6 p-4 ps-md-0">
+      <h5 class="mt-0">Movimiento Ciudadano</h5>
+      <p>Al igual que tú, día a día trabajamos para construir un mejor Apaxtla. Un Municipio donde quepamos todas las personas, donde haya oportunidades para todas y todos, donde se respete y se cuide el medio ambiente y donde todos podamos vivir de manera segura y libre.</p>
+      <p>Por eso, junto contigo, trabajamos para lograr nuestra evolución, la Evolución Mexicana que nos permita construir un mejor futuro para todos. Es momento de iniciarla, únete y forma parte de este gran Movimiento que quiere cambiar a nuestro municipio: Apaxtla.</p>
+      <a href="" class="stretched-link">Go somewhere</a>
+    </div>
+  </div>
+  
+  <div class=""  style="margin-left:200px; margin-top:200px">
+    <p class="fs-1 text-start ">Novedades</p>
+  </div>
+
+
+<!--Imagenes-->
+<div class="container text-center mt-5" data-aos="fade-down-right" data-aos-duration="3000">
+  <div class="row">
+    <!-- Primera fila -->
+    <div class="col-md-4 mb-4">
+      <img src="/assets/img/1.jpg" class="img-fluid" alt="Imagen 1" style="width:100%">
+      <p style="margin-top:15px; text-align:left">ARRANGUE DE CAMPAÑA EN APAXTLA DE CASTREJÓN GRO.</p>
+    </div>
+    <div class="col-md-4 mb-4">
+      <img src="/assets/img/1.jpg" class="img-fluid" alt="Imagen 2" style="width:100%">
+      <p style="margin-top:15px; text-align:left">Descripción 1 de la imagen 1</p>
+    </div>
+    <div class="col-md-4 mb-4">
+      <img src="/assets/img/1.jpg" class="img-fluid" alt="Imagen 3" style="width:100%">
+      <p style="margin-top:15px; text-align:left">Descripción 1 de la imagen 1</p>
+    </div>
+  </div>
+  <div class="row">
+    <!-- Segunda fila -->
+    <div class="col-md-4 mb-4">
+      <img src="/assets/img/2.jpg" class="img-fluid" alt="Imagen 4" style="width:100%">
+      <p style="margin-top:15px; text-align:left">Descripción 1 de la imagen 1</p>
+    </div>
+    <div class="col-md-4 mb-4">
+      <img src="/assets/img/2.jpg" class="img-fluid" alt="Imagen 5" style="width:100%">
+      <p style="margin-top:15px; text-align:left">Descripción 1 de la imagen 1</p>
+    </div>
+    <div class="col-md-4 mb-4">
+      <img src="/assets/img/2.jpg" class="img-fluid" alt="Imagen 6" style="width:100%">
+      <p style="margin-top:15px; text-align:left">Descripción 1 de la imagen 1</p>
+    </div>
+  </div>
+</div>
+<script>
+  AOS.init();
+</script>
+</body>
+</html>
