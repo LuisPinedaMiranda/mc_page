@@ -18,14 +18,14 @@
 .card{
       box-shadow: 0 0 30px rgba(0,0,0,5);
       overflow: hidden;
-      border-radius: 15px;
+      border-radius: 40px;
 
     }
     
     .img1 img{
       height: 200px;
-      border-top right radius: 15px;
-      border-top left radius: 15px;
+      border-top right radius: 40px;
+      border-top left radius: 40px;
       width:100%;
     }
 
@@ -163,15 +163,27 @@
     padding-top: 1rem !important;
 }
 
+.card .img1 img {
+        width: 100%; /* Ajustar el ancho al 100% del contenedor */
+        height: 100%; /* Ajustar el alto al 100% del contenedor */
+        object-fit: cover; /* Mantener la relación de aspecto y ajustar la imagen */
+    }
+
    /* Media Query para pantallas pequeñas */
    @media (max-width: 768px) {
     .header-interno_title {
-            font-size: 4.5rem; /* Tamaño de fuente más pequeño */
+            font-size: 2.5rem; /* Tamaño de fuente más pequeño */
             letter-spacing: 0.1rem; /* Espaciado entre letras más pequeño */
+            line-height: 1.2; /* Altura de línea más pequeña */
         }
+
         .section-title {
-            font-size: 1.2rem; /* Tamaño de fuente más pequeño */
-            margin-top: 10px;
+            font-size: 1rem; /* Tamaño de fuente más pequeño */
+            margin-top: 10px; /* Menor margen superior */
+        }
+
+        .banner-info {
+            padding-top: 20px; /* Mayor espaciado superior */
         }
     }
 
@@ -214,7 +226,7 @@
       <!--Primer CARD-->
       <div class="col-lg-4">
           <div class="card">
-            <div class="img1"><img src="{{ asset('resources/images/1.jpg') }}" alt=""></div>
+            <div class="img1"><img src="{{ asset('resources/images/mc_card_red.jpg') }}" alt=""></div>
             <div class="img2"><img src="{{ asset('resources/images/a1.jpg') }}" alt=""></div>
             <div class="main-text">
               <h2>Person One</h2>
@@ -241,7 +253,7 @@
         <!--Primer CARD-->
         <div class="col-lg-4 mb-4">
             <div class="card">
-              <div class="img1"><img src="{{ asset('resources/images/1.jpg') }}" alt=""></div>
+              <div class="img1"><img src="{{ asset('resources/images/cards_red.png') }}" alt=""></div>
               <div class="img2"><img src="{{ asset('resources/images/a1.jpg') }}" alt=""></div>
               <div class="main-text">
                 <h2>Person One</h2>
@@ -256,7 +268,7 @@
         <!--Segundo CARD-->
         <div class="col-lg-4 mb-4" style="" data-aos="zoom-in" data-aos-duration="3000">
           <div class="card">
-            <div class="img1"><img src="{{ asset('resources/images/2.jpg') }}" alt=""></div>
+            <div class="img1"><img src="{{ asset('resources/images/cards_red.png') }}" alt=""></div>
             <div class="img2"><img src="{{ asset('resources/images/a2.jpg') }}" alt=""></div>
             <div class="main-text">
               <h2>Person Two</h2>
@@ -271,7 +283,7 @@
         <!--Tercer CARD-->
         <div class="col-lg-4 mb-4">
           <div class="card">
-            <div class="img1"><img src="{{ asset('resources/images/3.jpg') }}" alt=""></div>
+            <div class="img1"><img src="{{ asset('resources/images/cards_red.png') }}" alt=""></div>
             <div class="img2"><img src="{{ asset('resources/images/a3.jpg') }}" alt=""></div>
             <div class="main-text">
               <h2>Person Three</h2>
@@ -294,7 +306,7 @@
         <!--Primer CARD-->
         <div class="col-lg-4 mb-4">
             <div class="card">
-              <div class="img1"><img src="{{ asset('resources/images/1.jpg') }}" alt=""></div>
+              <div class="img1"><img src="{{ asset('resources/images/cards_red.png') }}" alt=""></div>
               <div class="img2"><img src="{{ asset('resources/images/a1.jpg') }}" alt=""></div>
               <div class="main-text">
                 <h2>Person One</h2>
@@ -309,7 +321,7 @@
         <!--Segundo CARD-->
         <div class="col-lg-4 mb-4" style="">
           <div class="card">
-            <div class="img1"><img src="{{ asset('resources/images/2.jpg') }}" alt=""></div>
+            <div class="img1"><img src="{{ asset('resources/images/cards_red.png') }}" alt=""></div>
             <div class="img2"><img src="{{ asset('resources/images/a2.jpg') }}" alt=""></div>
             <div class="main-text">
               <h2>Person Two</h2>
@@ -324,7 +336,7 @@
         <!--Tercer CARD-->
         <div class="col-lg-4 mb-4">
           <div class="card">
-            <div class="img1"><img src="{{ asset('resources/images/3.jpg') }}" alt=""></div>
+            <div class="img1"><img src="{{ asset('resources/images/cards_red.png') }}" alt=""></div>
             <div class="img2"><img src="{{ asset('resources/images/a3.jpg') }}" alt=""></div>
             <div class="main-text">
               <h2>Person Three</h2>
