@@ -129,6 +129,20 @@
     max-width: 180px;
     height: 90px;
   }
+   /* Ajuste para que el offcanvas se muestre correctamente */
+   .offcanvas-end {
+                width: 80%; /* Ancho del offcanvas */
+                background-color: #fb8c00; /* Color de fondo */
+            }
+
+   /* Centrar el título "Novedades" */
+   .custom-title {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 100%;
+  }
 }
 
   /* Ajuste específico para una resolución de 393x873 */
@@ -138,7 +152,7 @@
   </style>
 </head>
 <body>
-  <nav class="navbar bg-light fixed-top">
+  <nav class="navbar navbar-expand-lg bg-light fixed-top">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Offcanvas navbar</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
