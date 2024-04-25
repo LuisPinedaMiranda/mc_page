@@ -112,10 +112,10 @@
 }
 .header-interno_img-image {
     border-radius: calc(17.57282px + .64725vw);
-    height: calc(28.71456px + 14.12945vw);
+    height: calc(80.71456px + 14.12945vw);
     -o-object-fit: cover;
     object-fit: cover;
-    width: calc(65.79612px + 31.52104vw);
+    width: calc(100.79612px + 31.52104vw);
 }
 
 .header-interno_title {
@@ -163,6 +163,17 @@
     padding-top: 1rem !important;
 }
 
+   /* Media Query para pantallas pequeñas */
+   @media (max-width: 768px) {
+    .header-interno_title {
+            font-size: 4.5rem; /* Tamaño de fuente más pequeño */
+            letter-spacing: 0.1rem; /* Espaciado entre letras más pequeño */
+        }
+        .section-title {
+            font-size: 1.2rem; /* Tamaño de fuente más pequeño */
+            margin-top: 10px;
+        }
+    }
 
     </style>
 </head>
@@ -228,7 +239,7 @@
     <div class="container">
       <div class="row">
         <!--Primer CARD-->
-        <div class="col-lg-4">
+        <div class="col-lg-4 mb-4">
             <div class="card">
               <div class="img1"><img src="{{ asset('resources/images/1.jpg') }}" alt=""></div>
               <div class="img2"><img src="{{ asset('resources/images/a1.jpg') }}" alt=""></div>
@@ -243,7 +254,7 @@
           </div>
         </div>
         <!--Segundo CARD-->
-        <div class="col-lg-4" style="" data-aos="zoom-in" data-aos-duration="3000">
+        <div class="col-lg-4 mb-4" style="" data-aos="zoom-in" data-aos-duration="3000">
           <div class="card">
             <div class="img1"><img src="{{ asset('resources/images/2.jpg') }}" alt=""></div>
             <div class="img2"><img src="{{ asset('resources/images/a2.jpg') }}" alt=""></div>
@@ -258,7 +269,7 @@
         </div>
       </div>
         <!--Tercer CARD-->
-        <div class="col-lg-4">
+        <div class="col-lg-4 mb-4">
           <div class="card">
             <div class="img1"><img src="{{ asset('resources/images/3.jpg') }}" alt=""></div>
             <div class="img2"><img src="{{ asset('resources/images/a3.jpg') }}" alt=""></div>
@@ -281,7 +292,7 @@
     <div class="container">
       <div class="row">
         <!--Primer CARD-->
-        <div class="col-lg-4">
+        <div class="col-lg-4 mb-4">
             <div class="card">
               <div class="img1"><img src="{{ asset('resources/images/1.jpg') }}" alt=""></div>
               <div class="img2"><img src="{{ asset('resources/images/a1.jpg') }}" alt=""></div>
@@ -296,7 +307,7 @@
           </div>
         </div>
         <!--Segundo CARD-->
-        <div class="col-lg-4" style="">
+        <div class="col-lg-4 mb-4" style="">
           <div class="card">
             <div class="img1"><img src="{{ asset('resources/images/2.jpg') }}" alt=""></div>
             <div class="img2"><img src="{{ asset('resources/images/a2.jpg') }}" alt=""></div>
@@ -311,7 +322,7 @@
         </div>
       </div>
         <!--Tercer CARD-->
-        <div class="col-lg-4">
+        <div class="col-lg-4 mb-4">
           <div class="card">
             <div class="img1"><img src="{{ asset('resources/images/3.jpg') }}" alt=""></div>
             <div class="img2"><img src="{{ asset('resources/images/a3.jpg') }}" alt=""></div>
