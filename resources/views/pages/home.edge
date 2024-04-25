@@ -121,6 +121,25 @@
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Agregar una sombra para el efecto de enfoque */
   }
 
+  /*Media para movil*/
+  /* Ajuste para el logo en la versión móvil */
+  @media (max-width: 991px) {
+  .navbar-brand img {
+    margin-left: 15px; /* Posiciona el logo a la izquierda en la versión móvil */
+    max-width: 180px;
+    height: 90px;
+  }
+
+  /* Ajuste del ancho del botón del navbar-toggler */
+   /* Ajuste del ancho del botón del navbar-toggler */
+   .navbar-toggler {
+    padding: .25rem .5rem; /* Aumenta el tamaño del botón */
+    font-size: 1.25rem;
+    line-height: 1.5;
+    margin-right: 15px; /* Mueve el botón hacia la izquierda */
+  }
+}
+
 
   </style>
 </head>
@@ -197,7 +216,7 @@
     <img src="/assets/img/movimiento2.jpeg" alt="" class="img-fluid">
   </div>-->
 
-  <div class="row g-0 bg-body-secondary position-relative" style="margin-top:180px" data-aos="zoom-out-down" data-aos-duration="3000">
+  <div class="row g-0 bg-body-secondary position-relative" style="margin-top:100px" data-aos="zoom-out-down" data-aos-duration="3000">
     <div class="col-md-6 mb-md-0 p-md-4">
       <img src="{{ asset('resources/images/movimiento2.jpeg') }}" class="w-100" alt="...">
     </div>
