@@ -129,59 +129,19 @@
     max-width: 180px;
     height: 90px;
   }
-
-  /* Ajuste del ancho del botón del navbar-toggler */
-   /* Ajuste del ancho del botón del navbar-toggler */
-   .navbar-toggler {
-    padding: .25rem .5rem; /* Aumenta el tamaño del botón */
-    font-size: 1.25rem;
-    line-height: 1.5;
-    position: fixed; /* Añadir posicionamiento fijo */
-    top: 8px; /* Posición desde la parte superior */
-    right: 15px; /* Ajuste del margen derecho */
-  }
-   /* Ajuste del ancho de la navbar en la versión móvil */
-   .navbar {
-    padding-right: 15px; /* Agrega un padding a la derecha */
-    padding-left: 15px; /* Agrega un padding a la izquierda */
-  }
-  /* Ocultar el desbordamiento horizontal cuando el offcanvas está activo */
-  body.offcanvas-open {
-    overflow-x: hidden;
-  }
 }
 
   /* Ajuste específico para una resolución de 393x873 */
-@media (max-width: 393px) {
-  .navbar-toggler {
-    padding: .25rem .5rem; /* Aumenta el tamaño del botón */
-    font-size: 1.25rem;
-    line-height: 1.5;
-    position: fixed; /* Añadir posicionamiento fijo */
-    top: 8px; /* Posición desde la parte superior */
-    right: 15px; /* Ajuste del margen derecho */
-  }
 
-  .navbar {
-    padding-right: 10px; /* Reducir el padding a la derecha */
-    padding-left: 10px; /* Reducir el padding a la izquierda */
-  }
-  /* Ocultar el desbordamiento horizontal cuando el offcanvas está activo */
-  body.offcanvas-open {
-    overflow-x: hidden;
-  }
-}
 
 
   </style>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg  fixed-top">
+  <nav class="navbar bg-light fixed-top">
     <div class="container-fluid">
-      <a class="navbar-brand me-auto" href="#">
-        <img src="{{ asset('resources/images/mc_log.png') }}" alt="Logo Movimiento Ciudadano">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+      <a class="navbar-brand" href="#">Offcanvas navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
@@ -190,23 +150,31 @@
           <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
-          <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
             <li class="nav-item">
-              <a class="nav-link  mx-lg-2" aria-current="page" href="#" >Propuesta</a>
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link mx-lg-2" href="#">Campaña</a>
+              <a class="nav-link" href="#">Link</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link mx-lg-2" href="#">Partido</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link mx-lg-2" href="/planilla">Planilla</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link mx-lg-2" href="#">Apoyos</a>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
             </li>
           </ul>
+          <form class="d-flex mt-3" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
         </div>
       </div>
     </div>
