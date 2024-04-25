@@ -142,12 +142,21 @@
     padding-right: 15px; /* Agrega un padding a la derecha */
     padding-left: 15px; /* Agrega un padding a la izquierda */
   }
+  /* Ocultar el desbordamiento horizontal cuando el offcanvas está activo */
+  body.offcanvas-open {
+    overflow-x: hidden;
+  }
+}
 
   /* Ajuste específico para una resolución de 393x873 */
 @media (max-width: 393px) {
   .navbar {
     padding-right: 10px; /* Reducir el padding a la derecha */
     padding-left: 10px; /* Reducir el padding a la izquierda */
+  }
+  /* Ocultar el desbordamiento horizontal cuando el offcanvas está activo */
+  body.offcanvas-open {
+    overflow-x: hidden;
   }
 }
 
@@ -279,6 +288,20 @@
 </div>
 <script>
   AOS.init();
+  /*Offcanvas*/
+  document.addEventListener('DOMContentLoaded', function () {
+  var offcanvas = new bootstrap.Offcanvas(document.getElementById('offcanvasNavbar'));
+
+  // Añadir la clase al body cuando se abre el offcanvas
+  offcanvas._element.addEventListener('shown.bs.offcanvas', function () {
+    document.body.classList.add('offcanvas-open');
+  });
+
+  // Quitar la clase al body cuando se cierra el offcanvas
+  offcanvas._element.addEventListener('hidden.bs.offcanvas', function () {
+    document.body.classList.remove('offcanvas-open');
+  });
+});
 </script>
 </body>
 </html>
