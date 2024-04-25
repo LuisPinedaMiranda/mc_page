@@ -20,7 +20,7 @@
     #carouselExampleIndicators .carousel-item img{
      object-fit: contain;
      object-position:center; /* Centrar la imagen en la parte superior */
-    width: 100%;
+     width: 100%;
     
     }
 
@@ -43,11 +43,11 @@
 
     /* Ajuste de z-index para el carrusel */
     #carouselExampleIndicators {
-      margin-top: 120px; /* Espacio superior para evitar que se tape con la barra de navegación */
+      margin-top: 5px; /* Espacio superior para evitar que se tape con la barra de navegación */
     }
 
     /* Estilo para la barra de navegación */
-    .navbar {
+    .nav-color {
       background-color: #fb8c00; /* Cambia este color a tu color personalizado */
     }
 
@@ -133,21 +133,20 @@
    /* Centrar el título "Novedades" */
    .custom-title {
     text-align: center;
-    margin-right: 100px;
+    margin-right: 600px;
   }
 }
 
   /* Ajuste específico para una resolución de 393x873 */
-
-
-
   </style>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg bg-light">
+  <nav class="navbar navbar-expand-lg nav-color">
     <div class="container">
       <!--LOGO-->
-      <a class="navbar-brand" href="#">Offcanvas navbar</a>
+      <a class="navbar-brand" href="#">
+        <img src="{{ asset('resources/images/mc_log.png') }}" alt="Logo Movimiento Ciudadano">
+      </a>
       <!--Toggler Botton -->
       <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
         <span class="navbar-toggler-icon"></span>
@@ -163,10 +162,10 @@
         <div class="offcanvas-body">
           <ul class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3">
             <li class="nav-item mx-2">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link active" aria-current="page" href="#">Propuestas</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link mx-2" href="#">About</a>
+              <a class="nav-link mx-2" href="/planilla">Planilla</a>
             </li>
             <li class="nav-item">
               <a class="nav-link mx-2" href="#">Services</a>
