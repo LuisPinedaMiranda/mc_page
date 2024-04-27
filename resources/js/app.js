@@ -16,7 +16,8 @@ var swiper = new Swiper('.slide-content', {
   loopFillGroupWithBlanck: true,
   breakpoints: {
     1024: {
-      slidesPerView: 3,
+      slidesPerView: 4,
+      slidesPerGroup: 1,
     },
     769: {
       slidesPerView: 1,
