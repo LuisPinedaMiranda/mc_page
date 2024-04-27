@@ -23,6 +23,7 @@ var swiper = new Swiper('.slide-content', {
     },
     393: {
       slidesPerView: 1,
+      slidesPerGroup: 1,
     },
   },
   scrollbar: {
