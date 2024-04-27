@@ -62,7 +62,8 @@
     "edge.js": "^6.0.2",
     "luxon": "^3.4.4",
     "mysql2": "^3.9.2",
-    "reflect-metadata": "^0.2.1"
+    "reflect-metadata": "^0.2.1",
+    "swiper": "^11.1.1"
   },
   "eslintConfig": {
     "extends": "@adonisjs/eslint-config/app"

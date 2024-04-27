@@ -6,7 +6,11 @@
   <title> Movimiento Ciudadano | Maribel Manjarrez </title>
   @vite(['resources/css/app.css'])
   @vite(['resources/js/app.js'])
-  @vite(['resources/js/app.js'])
+  <!--Swiper-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+  <!--fin swiper-->
   <!--AOS animations-->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -151,7 +155,204 @@
 
 }
 
-  /* Ajuste específico para una resolución de 393x873 */
+/*Todo lo de propuestas*/
+.propuestas {
+    background-color: #fafafa;
+    padding-bottom: calc(88px + 10vw);
+    padding-top: calc(92px + 8.75vw);
+    position: relative;
+    text-align: center;
+}
+
+.propuestas-puntos {
+    position: absolute;
+    right: 0;
+    top: -25.8%;
+    z-index: 1;
+}
+.subtitles {
+    color: #000;
+    font-size: calc(11.02913px + .2589vw);
+    letter-spacing: calc(1.43379px + .03366vw);
+    line-height: calc(14.78641px + .32362vw);
+    margin-bottom: calc(3.78641px + .32362vw);
+    text-transform: uppercase;
+    text-align: center;
+    padding: 20px;
+}
+.titles {
+    color: #000;
+    font-family: Poppins;
+    font-size: calc(20.14563px + 1.2945vw);
+    font-weight: 700;
+    line-height: calc(23.93204px + 1.61812vw);
+    width: calc(208.98058px + 24.27184vw);
+    text-align: center;
+}
+
+/*Swiper*/
+
+.propuestas-list {
+    margin-top: 60px;
+}
+
+.propuestas .swiper-container {
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+/*Fin de Swiper*/
+
+/*Segundo div con swiper*/
+element.style {
+    transform: translate3d(0px, 0px, 0px);
+    transition-duration: 0ms;
+}
+
+
+.propuestas-box {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 20px 15px 40px 0 rgba(87, 64, 2, .08);
+    height: calc(441px + 2.8125vw);
+    padding: 20px 22px 80px 10px;
+    width: calc(256.4px + 7.375vw);
+}
+.propuestas-box_number {
+    color: #000;
+    font-family: Poppins;
+    font-size: calc(27px + .9375vw);
+    font-weight: 700;
+    opacity: .05;
+    text-align: left;
+}
+.propuestas-box_title {
+    font-family: Poppins;
+    font-size: calc(16.6px + .4375vw);
+    font-weight: 700;
+    line-height: calc(18px + .625vw);
+    padding: 0 22px;
+}
+.propuestas-box_description {
+    font-size: calc(15.2px + .25vw);
+    line-height: calc(18px + .625vw);
+    margin-top: 20px;
+    padding: 0 22px;
+}
+
+
+/*Cards Propuestas*/
+.bod{
+  /*border: 3px solid blue;*/
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #EFEFEF;
+  margin-top: 80px;
+}
+.slide-container{
+  max-width: 1220px;
+  width: 100%;
+  height: 630px;
+  /*background-color: grey;*/
+  background-color: #EFEFEF;
+  padding: 50px 0;
+  /*border: 2px solid yellow;*/
+}
+.slide-content{
+  /*border: 5px solid green;*/
+  margin: 50px;
+}
+.card{
+  width: 400px;
+  height: 520px;
+  border-radius: 25px;
+  background-color: #fff;
+}
+.image-content,
+.card-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 14px;
+}
+.image-content{
+  position: relative;
+  row-gap: 5px;
+  padding: 25px 0;
+}
+.overlay{
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #4070F4;
+  border-radius: 25px 25px 0 25px;
+}
+
+.overlay::before,
+.overlay::after{
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: -40px;
+  height: 40px;
+  width: 40px;
+  background-color: #4070F4;
+}
+.overlay::after{
+  border-radius: 0 25px 0 0;
+  background-color: #FFF;
+}
+
+.card-image{
+  position: relative;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background: #fafafa;
+  padding: 3px
+}
+.card-image .card-img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #4070f4;
+}
+.name{
+  font-size: 20px;
+  font-weight: 800;
+  color: #333;
+}
+.description{
+  font-size: 16px;
+  color: #707070;
+  text-align: center;
+}
+.button{
+  border: none;
+  font-size:18px;
+  color: #FFF;
+  padding: 8px 16px;
+  background-color: #4070F4;
+  border-radius: 6px;
+  margin: 14px;
+  transition: all 0.3s ease;
+}
+
+.button:hover{
+  background: #265DF2;
+}
+
+.card-wrapper{
+  /*border: 2px solid red;*/
+}
+
+
+  
   </style>
 </head>
 <body>
@@ -242,10 +443,139 @@
     </div>
   </div>
   
-  <div class="container" style="margin-top:100px">
+  
+
+
+  <!--Propuestas-->
+  <div class="bod">
+    <div class="propuestas-puntos">
+      <img src="https://movimientociudadano.mx/images/puntos-amarillos-candidatos.svg">
+    </div>
+    <div class="container-fluid">
+      <div class="row justify-content-center">
+        <div class="col-11">
+          <div class="subtitles">Propuestas</div>
+          <div class="titles m-auto">Conoce las 10 propuestas para el avance Apaxtlense</div>
+        </div>
+      </div>
+    </div>
+
+  <div class="slide-container swiper">
+    <div class="slide-content">
+      <div class="card-wrapper swiper-wrapper">
+
+
+        <div class="card swiper-slide">
+          <div class="image-content">
+            <span class="overlay"></span>
+              <div class="card-image">
+                <img src="https://movimientociudadano.mx/images/propuestas/icono-agua.svg" alt="" class="card-img">
+              </div>
+
+          </div>
+           <div class="card-content">
+              <h2 class="name">David Dell</h2>
+              <p class="description">Lorem ipsum dolor descripción de propuestas sobre la campaña Lorem ipsum dolor descripción de propuestas sobre la campaña Lorem ipsum dolor descripción de propuestas sobre la campaña</p>
+              <button class="button">View More</button>
+           </div>
+        </div>
+
+        <div class="card swiper-slide">
+          <div class="image-content">
+            <span class="overlay"></span>
+              <div class="card-image">
+                <img src="https://movimientociudadano.mx/images/propuestas/icono-jubilacion.svg" alt="" class="card-img">
+              </div>
+
+          </div>
+           <div class="card-content">
+              <h2 class="name">David Dell</h2>
+              <p class="description">Lorem ipsum dolor descripción de propuestas sobre la campaña Lorem ipsum dolor descripción de propuestas sobre la campaña Lorem ipsum dolor descripción de propuestas sobre la campaña</p>
+              <button class="button">View More</button>
+           </div>
+        </div>
+
+
+
+        <div class="card swiper-slide">
+          <div class="image-content">
+            <span class="overlay"></span>
+              <div class="card-image">
+                <img src="https://movimientociudadano.mx/images/propuestas/icono-acoso.svg" alt="" class="card-img">
+              </div>
+
+          </div>
+           <div class="card-content">
+              <h2 class="name">David Dell</h2>
+              <p class="description">Lorem ipsum dolor descripción de propuestas sobre la campaña Lorem ipsum dolor descripción de propuestas sobre la campaña Lorem ipsum dolor descripción de propuestas sobre la campaña</p>
+              <button class="button">View More</button>
+           </div>
+        </div>
+
+        <div class="card swiper-slide">
+          <div class="image-content">
+            <span class="overlay"></span>
+              <div class="card-image">
+                <img src="https://movimientociudadano.mx/images/propuestas/icono-jubilacion.svg" alt="" class="card-img">
+              </div>
+
+          </div>
+           <div class="card-content">
+              <h2 class="name">David Dell</h2>
+              <p class="description">Lorem ipsum dolor descripción de propuestas sobre la campaña Lorem ipsum dolor descripción de propuestas sobre la campaña Lorem ipsum dolor descripción de propuestas sobre la campaña</p>
+              <button class="button">View More</button>
+           </div>
+        </div>
+
+
+        <div class="card swiper-slide">
+          <div class="image-content">
+            <span class="overlay"></span>
+              <div class="card-image">
+                <img src="https://movimientociudadano.mx/images/propuestas/icono-acoso.svg" alt="" class="card-img">
+              </div>
+
+          </div>
+           <div class="card-content">
+              <h2 class="name">David Dell</h2>
+              <p class="description">Lorem ipsum dolor descripción de propuestas sobre la campaña Lorem ipsum dolor descripción de propuestas sobre la campaña Lorem ipsum dolor descripción de propuestas sobre la campaña</p>
+              <button class="button">View More</button>
+           </div>
+        </div>
+
+
+
+        <div class="card swiper-slide">
+          <div class="image-content">
+            <span class="overlay"></span>
+              <div class="card-image">
+                <img src="https://movimientociudadano.mx/images/propuestas/icono-agua.svg" alt="" class="card-img">
+              </div>
+
+          </div>
+           <div class="card-content">
+              <h2 class="name">David Dell</h2>
+              <p class="description">Lorem ipsum dolor descripción de propuestas sobre la campaña Lorem ipsum dolor descripción de propuestas sobre la campaña Lorem ipsum dolor descripción de propuestas sobre la campaña</p>
+              <button class="button">View More</button>
+           </div>
+        </div>
+
+
+      </div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div><!--slide-container-->
+</div><!--body-->
+
+  <!--Fin de propuestas-->
+
+  <!---->
+
+<div class="container" style="margin-top:100px">
     <p class="fs-1 text-center" style="">Novedades</p>
   </div>
-
 
 <!--Imagenes-->
 <div class="container text-center mt-5" data-aos="fade-down-right" data-aos-duration="3000">
@@ -283,5 +613,6 @@
 <script>
   AOS.init();
 </script>
+
 </body>
 </html>
