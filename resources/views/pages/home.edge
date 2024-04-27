@@ -355,6 +355,7 @@ element.style {
 @media screen and (max-width: 393px) {
     #carouselExampleIndicators .carousel-item img {
         height: 700px; /* Ajustar la altura específicamente para la resolución deseada */
+        object-fit: cover;
     }
 }
   
@@ -412,13 +413,13 @@ element.style {
         <img src="{{ asset('resources/images/portada_rectangular_3.jpg') }}" class="d-block" alt="..." style="height:700px; border:solid red 2px;">
       </div>
       <div class="carousel-item">
-        <img src="{{ asset('resources/images/flyer_mc.jpg') }}" class="d-block w-100" style="height:700px">
+        <img src="{{ asset('resources/images/flyer_mc.jpg') }}" class="d-block w-100" style="height:500px">
       </div>
       <div class="carousel-item">
-        <img src="{{ asset('resources/images/portada_mc.jpg') }}" class="d-block w-100" alt="..." style="height:700px">
+        <img src="{{ asset('resources/images/portada_mc.jpg') }}" class="d-block w-100" alt="..." style="height:600px">
       </div>
       <div class="carousel-item">
-        <img src="{{ asset('resources/images/portada2_mc.jpg') }}" class="d-block w-100" alt="..." style="height:700px">
+        <img src="{{ asset('resources/images/portada2_mc.jpg') }}" class="d-block w-100" alt="..." style="height:600px">
         <!--<div style="background-color:cadetblue;">CUATRO</div>-->
       </div>
     </div>
