@@ -47,7 +47,7 @@
 
     /* Ajuste de z-index para el carrusel */
     #carouselExampleIndicators {
-      margin-top: 5px; /* Espacio superior para evitar que se tape con la barra de navegación */
+      margin-top: 6px; /* Espacio superior para evitar que se tape con la barra de navegación */
     }
 
     /* Estilo para la barra de navegación */
@@ -351,7 +351,12 @@ element.style {
   /*border: 2px solid red;*/
 }
 
-
+/* Media query para dispositivos con una resolución de 393 x 873 */
+@media screen and (max-width: 393px) {
+    #carouselExampleIndicators .carousel-item img {
+        height: 700px; /* Ajustar la altura específicamente para la resolución deseada */
+    }
+}
   
   </style>
 </head>
@@ -402,18 +407,18 @@ element.style {
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
-    <div class="carousel-inner" style="">
+    <div class="carousel-inner" style="border:green solid 6px;">
       <div class="carousel-item active">
-        <img src="{{ asset('resources/images/portada_rectangular_3.jpg') }}" class="d-block" alt="..." style="height:900px;">
+        <img src="{{ asset('resources/images/portada_rectangular_3.jpg') }}" class="d-block" alt="..." style="height:700px; border:solid red 2px;">
       </div>
       <div class="carousel-item">
-        <img src="{{ asset('resources/images/flyer_mc.jpg') }}" class="d-block w-100" style="height:900px">
+        <img src="{{ asset('resources/images/flyer_mc.jpg') }}" class="d-block w-100" style="height:700px">
       </div>
       <div class="carousel-item">
-        <img src="{{ asset('resources/images/portada_mc.jpg') }}" class="d-block w-100" alt="..." style="height:900px">
+        <img src="{{ asset('resources/images/portada_mc.jpg') }}" class="d-block w-100" alt="..." style="height:700px">
       </div>
       <div class="carousel-item">
-        <img src="{{ asset('resources/images/portada2_mc.jpg') }}" class="d-block w-100" alt="..." style="height:600px">
+        <img src="{{ asset('resources/images/portada2_mc.jpg') }}" class="d-block w-100" alt="..." style="height:700px">
         <!--<div style="background-color:cadetblue;">CUATRO</div>-->
       </div>
     </div>
