@@ -22,21 +22,21 @@ var swiper = new Swiper('.slide-content', {
     769: {
       slidesPerView: 1,
     },
-    393: {
+    600: {
       slidesPerView: 1,
       slidesPerGroup: 1,
     },
-    392: {
+    0: {
       slidesPerView: 1,
       slidesPerGroup: 1,
+      // max-width: 392px
+      max: 392,
     },
-    391: {
+    394: {
       slidesPerView: 1,
       slidesPerGroup: 1,
-    },
-    390: {
-      slidesPerView: 1,
-      slidesPerGroup: 1,
+      // min-width: 393px
+      min: 393,
     },
   },
   scrollbar: {
