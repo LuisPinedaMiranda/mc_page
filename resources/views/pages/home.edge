@@ -351,9 +351,14 @@ element.style {
   /*border: 2px solid red;*/
 }
 
-/* Media query para dispositivos con una resolución de 393 x 873 */
 @media screen and (max-width: 393px) {
+    #carouselExampleIndicators .carousel-item {
+        height: 700px; /* Ajustar la altura deseada */
+    }
+
     #carouselExampleIndicators .carousel-item img {
+        width: 100%;
+        height: 100%;
         object-fit: cover;
     }
 }
