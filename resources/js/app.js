@@ -26,6 +26,10 @@ var swiper = new Swiper('.slide-content', {
       slidesPerView: 1,
       slidesPerGroup: 1,
     },
+    390: {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+    },
   },
   scrollbar: {
     el: '.swiper-scrollbar',
