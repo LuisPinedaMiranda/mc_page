@@ -137,23 +137,6 @@
  }
 
 
- /*Para efecto de enfoque de las cards*/
- .card {
-     margin: 0 5px;
-     /* Margen horizontal para las tarjetas */
-     transition: transform 0.3s ease-in-out;
-     /* Transición suave para el efecto de enfoque */
- }
-
- .card:hover {
-     transform: scale(1.05);
-     /* Aumentar el tamaño de la tarjeta al pasar el mouse */
-     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-     /* Agregar una sombra para el efecto de enfoque */
- }
-
-
-
  /*Media para movil*/
  /* Ajuste para el logo en la versión móvil */
  @media (max-width: 991px) {
@@ -298,8 +281,12 @@
  }
 
  .slide-content {
-     /*border: 5px solid green;*/
+     /*Added recently*/
      margin: 50px;
+ }
+
+ .card-content{
+  height: 320px;
  }
 
  .card {
@@ -520,7 +507,7 @@
     <div class="slide-content">
       <div class="card-wrapper swiper-wrapper">
 
-
+<!--Inician Cards-->
         <div class="card swiper-slide">
           <div class="image-content">
             <span class="overlay"></span>
@@ -530,9 +517,9 @@
 
           </div>
            <div class="card-content">
-              <h2 class="name">David Dell</h2>
-              <p class="description">Lorem ipsum dolor descripción de propuestas sobre la campaña Lorem ipsum dolor descripción de propuestas sobre la campaña Lorem ipsum dolor descripción de propuestas sobre la campaña</p>
-              <button class="btn button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">View More</button>
+              <h2 class="name">Agua</h2>
+              <p class="description">En Apaxtla el acceso al agua es un derecho, no un privilegio, por lo que continuamos mejorando los sistemas de agua potable.</p>
+              <button class="btn button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Ver Más</button>
            </div>
         </div>
 
@@ -545,9 +532,9 @@
 
           </div>
            <div class="card-content">
-              <h2 class="name">David Dell</h2>
-              <p class="description">Lorem ipsum dolor descripción de propuestas sobre la campaña Lorem ipsum dolor descripción de propuestas sobre la campaña Lorem ipsum dolor descripción de propuestas sobre la campaña</p>
-              <button class="btn button" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">View More</button>
+              <h2 class="name">Desarrollo Económico</h2>
+              <p class="description">Se emplearán las estrategias suficientes tanto para el comercio, así como la creación de cadenas de valor comercial para los artesanos del municipio entre otras.</p>
+              <button class="btn button" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">Ver Más</button>
            </div>
         </div>
 
@@ -557,14 +544,14 @@
           <div class="image-content">
             <span class="overlay"></span>
               <div class="card-image">
-                <img src="https://movimientociudadano.mx/images/propuestas/icono-acoso.svg" alt="" class="card-img">
+                <img src="https://movimientociudadano.mx/images/propuestas/icono-permisos-papas.svg" alt="" class="card-img">
               </div>
 
           </div>
            <div class="card-content">
-              <h2 class="name">David Dell</h2>
+              <h2 class="name">Bienestar Social</h2>
               <p class="description">Lorem ipsum dolor descripción de propuestas sobre la campaña Lorem ipsum dolor descripción de propuestas sobre la campaña Lorem ipsum dolor descripción de propuestas sobre la campaña</p>
-              <button class="button">View More</button>
+              <button class="btn button" data-bs-toggle="modal" data-bs-target="#staticBackdrop3">Ver Más</button>
            </div>
         </div>
 
@@ -572,14 +559,14 @@
           <div class="image-content">
             <span class="overlay"></span>
               <div class="card-image">
-                <img src="https://movimientociudadano.mx/images/propuestas/icono-jubilacion.svg" alt="" class="card-img">
+                <img src="{{ asset('resources/images/educacion-logo.png') }}" alt="" class="card-img">
               </div>
 
           </div>
            <div class="card-content">
-              <h2 class="name">David Dell</h2>
-              <p class="description">Lorem ipsum dolor descripción de propuestas sobre la campaña Lorem ipsum dolor descripción de propuestas sobre la campaña Lorem ipsum dolor descripción de propuestas sobre la campaña</p>
-              <button class="button">View More</button>
+              <h2 class="name">Educación</h2>
+              <p class="description">La educación es la base de la avance y desarrollo de una nación y a su vez de nuestra comunidad. Es por ello que tenemos propuestas solidas para el desarrollo académico de nuestros niños y jovenes</p>
+              <button class="btn button" data-bs-toggle="modal" data-bs-target="#staticBackdrop4">Ver Más</button>
            </div>
         </div>
 
@@ -636,12 +623,17 @@
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="staticBackdropLabel">Propuesta para el Agua</h1>
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Agua</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <p>El agua es uno de los recursos más importantes e indispensable para la vida y actividad humana, así que la población no padecerá de agua potable</p>
-      </div>
+        <img src="{{ asset('resources/images/agua-potable-modal1.jpg') }}" class="img-fluid" alt="Imagen 4" style="width:100%; border-radius: 15px;">
+        <div style="padding:15px;">
+          <p>1.- Continuar buscando solución al problema de abasto de agua potable mediante los mecanismos legales y gestiones frente a las autoridades respectivas del ámbito federal y estatal.</p>
+          <p>2.- Gestionar recursos económicos para continuar la obra hidráulica, que incluyan el tratamiento de aguas residuales o negras. </p>
+          <p>3.- Creación de la Dirección Municipal de Agua Potable y Alcantarillado </p>
+        </div>
+        </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         <button type="button" class="btn btn-primary">Understood</button>
@@ -656,11 +648,18 @@
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="staticBackdropLabel">Propuesta para el Recurso Económico</h1>
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Desarrollo Económico</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <p>El recurso económico será aplicado a la obra pública correctamente para beneficio de la población Apaxtlense</p>
+        <img src="{{ asset('resources/images/desarrollo-economico-modal2.jpg') }}" class="img-fluid" alt="Imagen 4" style="width:100%; border-radius: 15px;">
+        <div style="padding:15px;">
+          <p>1.- Coadyuvar en la creación de cadenas de valor comercial para los productos artesanales originales del municipio. .</p>
+          <p>2.- Programas de Atención y Seguimiento a nuestros productores agrícolas, impulsar la exportación de la cosecha, a través del fomento de acciones presupuestadas para el óptimo manejo de los recursos públicos. </p>
+          <p>3.- Política para el Desarrollo y Crecimiento de Pymes</p>
+          <p>4.- Vinculación con dependencias federales y estatales para la atención vacuna. </p>
+          <p>5.-Continuar con el subsidio a los insumos agrícolas (semillas mejoradas, insecticidas).</p>
+        </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -671,8 +670,62 @@
 </div>
   <!--Fin Modal 2-->
 
+      <!-- Modal 3 -->
+<div class="modal modal-fade" id="staticBackdrop3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Bienestar Social</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <img src="{{ asset('resources/images/bienestar-social-modal2.png') }}" class="img-fluid" alt="Imagen 4" style="width:100%; border-radius: 15px; height:340px;">
+        <div style="padding:5px;">
+          <p>1.- Programa de Capacitación y Formación Cívica y Participación Ciudadana</p>
+          <p style="background-color:yellow;">2.- Construcción de Estancia Infantil para Madres Trabajadoras. </p>
+          <p>3.- Apoyo a Casa del Estudiante</p>
+          <p>4.- Instalación de Comedor Comunitario para personas en situación de marginación y vulnerabilidad social y económica</p>
+          <p>5.- Promoción de Actividades Extraescolares para la Niñez y la Juventud.</p>
+          <p style="background-color:pink;">5.- Creación de la Dirección de Atención de la comunidad LGBBTQ+. </p>
+          <p>6.- Instalación del Club del Adulto Mayor.</p>
+          
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Understood</button>
+      </div>
+    </div>
+  </div>
+</div>
+  <!--Fin Modal 3-->
 
 
+      <!-- Modal 4 -->
+      <div class="modal modal-fade" id="staticBackdrop4" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">Educación</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <img src="{{ asset('resources/images/educacion-modal4.png') }}" class="img-fluid" alt="Imagen 4" style="width:100%; border-radius: 15px; height:340px;">
+              <div style="padding:5px;">
+                <p>1.- Gestión frente a autoridades de la Secretaria de Educación Guerrero para encontrar soluciones al déficit de maestros frente a grupo y el mantenimiento a la infraestructura. </p>
+                <p style="background-color:yellow;">2.- Instalar talleres de regularización de nivel básico. </p>
+                <p>3.- Implementar talleres de música, poesía, danza, pintura y lectura. </p>
+                <p>4.- Fomentar la Creación de la Orquesta Juvenil de Apaxtla. </p>       
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Understood</button>
+            </div>
+          </div>
+        </div>
+      </div>
+        <!--Fin Modal 4-->
 
 
 
