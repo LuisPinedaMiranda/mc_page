@@ -19,7 +19,6 @@
       box-shadow: 0 0 30px rgba(0,0,0,5);
       overflow: hidden;
       border-radius: 40px;
-
     }
     
     .img1 img{
@@ -39,7 +38,6 @@
       height: 140px;
       border-radius: 50%;
       border: 7px solid #fff;
-
     }
 
     .card:hover .img2 img{
@@ -83,6 +81,7 @@
     display: flex;
     height: calc(239.32039px + 16.18123vw);
 }
+
 /*.justify-content-center {
     justify-content: center !important;
 }*/
@@ -171,6 +170,11 @@
 
    /* Media Query para pantallas pequeñas */
    @media (max-width: 768px) {
+    .header-interno_img {
+    height: calc(48.71456px + 14.12945vw);
+    position: relative;
+    width: calc(115.79612px + 31.52104vw);
+}
     .header-interno_title {
             font-size: 2.5rem; /* Tamaño de fuente más pequeño */
             letter-spacing: 0.1rem; /* Espaciado entre letras más pequeño */
@@ -178,8 +182,12 @@
         }
 
         .section-title {
+            text-align: center;
             font-size: 1rem; /* Tamaño de fuente más pequeño */
             margin-top: 10px; /* Menor margen superior */
+        }
+        .description{
+          text-align: center;
         }
 
         .banner-info {
@@ -212,7 +220,7 @@
                 <div class="banner-info d-inline-block text-left col-lg-7 col-md-8 col text-white">
                     <h2 class="section-title d-flex flex-column font-weight-bold mb-md-4 mb-2">
                         <span class="font-weight-light text-uppercase mb-md-3 mb-1 mt-5 mr-5">Conócenos</span> Movimiento Ciudadano</h2> 
-                        <p>Trabajamos por un Apaxtla en paz, justo e igualitario</p>
+                        <p class="description">Trabajamos por un Apaxtla en paz, justo e igualitario</p>
                     </div>
                 </div>
             </div>

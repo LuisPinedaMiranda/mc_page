@@ -60,6 +60,20 @@
 
  }
 
+ @media screen and (max-width: 768px) {
+     .c-item {
+         height: 220px;
+         /*width: 900px;*/
+     }
+
+     .c-img {
+         height: 180%;
+         /*width: 100%;*/
+         object-fit: cover;
+     }
+
+ }
+
  /*Fin de los estilos*/
 
  /* Estilo para el logo */
@@ -421,7 +435,7 @@
       <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
         <!--Sidebar Header-->
         <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Movimiento Ciudadano</h5>
           <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <!--Sidebar Body-->
@@ -434,10 +448,10 @@
               <a class="nav-link mx-2" href="/planilla">Planilla</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link mx-2" href="#">Services</a>
+              <a class="nav-link mx-2" href="#">Misión</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link mx-2" href="#">Contacto</a>
+              <a class="nav-link mx-2" href="#">Visión</a>
             </li>
           </ul>
         </div>
@@ -519,7 +533,7 @@
            <div class="card-content">
               <h2 class="name">Agua</h2>
               <p class="description">En Apaxtla el acceso al agua es un derecho, no un privilegio, por lo que continuamos mejorando los sistemas de agua potable.</p>
-              <button class="btn button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Ver Más</button>
+              <button class="btn button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="margin-top:60px">Ver Más</button>
            </div>
         </div>
 
@@ -550,8 +564,8 @@
           </div>
            <div class="card-content">
               <h2 class="name">Bienestar Social</h2>
-              <p class="description">Lorem ipsum dolor descripción de propuestas sobre la campaña Lorem ipsum dolor descripción de propuestas sobre la campaña Lorem ipsum dolor descripción de propuestas sobre la campaña</p>
-              <button class="btn button" data-bs-toggle="modal" data-bs-target="#staticBackdrop3">Ver Más</button>
+              <p class="description"> Se promoverá el bienestar social mediante acciones sólidas que satisfagan las necesidades básicas de las personas y fomenten oportunidades de progreso. </p>
+              <button class="btn button" data-bs-toggle="modal" data-bs-target="#staticBackdrop3" style="margin-top:40px">Ver Más</button>
            </div>
         </div>
 
@@ -565,10 +579,27 @@
           </div>
            <div class="card-content">
               <h2 class="name">Educación</h2>
-              <p class="description">La educación es la base de la avance y desarrollo de una nación y a su vez de nuestra comunidad. Es por ello que tenemos propuestas solidas para el desarrollo académico de nuestros niños y jovenes</p>
+              <p class="description"> Promovemos propuestas sólidas para el desarrollo educativo de niños y jóvenes, reconociendo su importancia para el avance y desarrollo tanto nacional como local.</p>
               <button class="btn button" data-bs-toggle="modal" data-bs-target="#staticBackdrop4">Ver Más</button>
            </div>
         </div>
+
+
+        <div class="card swiper-slide">
+          <div class="image-content">
+            <span class="overlay"></span>
+              <div class="card-image">
+                <img src="https://movimientociudadano.mx/images/propuestas/icono-energia.svg" alt="" class="card-img">
+              </div>
+
+          </div>
+           <div class="card-content">
+              <h2 class="name">Obras y Servicios Públicos</h2>
+              <p class="description"> Trabajaremos en propuestas para mejorar y expandir los servicios públicos y obras en nuestra comunidad municipal, asegurando que satisfagan las necesidades de todos los residentes y contribuyan al desarrollo y bienestar general.</p>
+              <button class="btn button" data-bs-toggle="modal" data-bs-target="#staticBackdrop5">View More</button>
+           </div>
+        </div>
+
 
 
         <div class="card swiper-slide">
@@ -580,26 +611,11 @@
 
           </div>
            <div class="card-content">
-              <h2 class="name">David Dell</h2>
-              <p class="description">Lorem ipsum dolor descripción de propuestas sobre la campaña Lorem ipsum dolor descripción de propuestas sobre la campaña Lorem ipsum dolor descripción de propuestas sobre la campaña</p>
-              <button class="button">View More</button>
-           </div>
-        </div>
+              <h2 class="name">Gobierno</h2>
+              <p class="description">Nuestra prioridad es establecer un gobierno municipal que sea transparente, responsable y receptivo a las necesidades de los ciudadanos, promoviendo la participación activa de la comunidad en la toma de decisiones.
 
-
-
-        <div class="card swiper-slide">
-          <div class="image-content">
-            <span class="overlay"></span>
-              <div class="card-image">
-                <img src="https://movimientociudadano.mx/images/propuestas/icono-agua.svg" alt="" class="card-img">
-              </div>
-
-          </div>
-           <div class="card-content">
-              <h2 class="name">David Dell</h2>
-              <p class="description">Lorem ipsum dolor descripción de propuestas sobre la campaña Lorem ipsum dolor descripción de propuestas sobre la campaña Lorem ipsum dolor descripción de propuestas sobre la campaña</p>
-              <button class="button">View More</button>
+              </p>
+              <button class="btn button" data-bs-toggle="modal" data-bs-target="#staticBackdrop6">View More</button>
            </div>
         </div>
 
@@ -635,8 +651,7 @@
         </div>
         </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Understood</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
       </div>
     </div>
   </div>
@@ -662,8 +677,7 @@
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Understood</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
       </div>
     </div>
   </div>
@@ -692,8 +706,7 @@
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Understood</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
       </div>
     </div>
   </div>
@@ -719,13 +732,87 @@
               </div>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Understood</button>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
             </div>
           </div>
         </div>
       </div>
         <!--Fin Modal 4-->
+
+
+  <!-- Modal 5 -->
+  <div class="modal modal-fade" id="staticBackdrop5" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Obras y Servicios Públicos</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="{{ asset('resources/images/servicios-publicos-modal5.jpg') }}" class="img-fluid" alt="Imagen 4" style="width:100%; border-radius: 15px; height:250px;">
+          <div style="padding:10px;">
+            <p>1.- Modernizar y lograr el 100% de cobertura de alumbrado público. </p>
+            <p>2.- Promover la separación de los Residuos Sólidos Urbanos. </p>
+            <p>3.- Revisión y mantenimiento permanente al Sistema de Drenaje y Alcantarillado. </p>
+            <p style="background-color:#F08080">4.- Rescate, mejoramiento y mantenimiento a la infraestructura municipal.  Canchas del Mercado. 
+              <br>
+              *Cancha Pública. 
+              <br>
+              *Gimnasio al Aire Libre. 
+              <br>
+              *Parque Nanchicahuite. 
+              <br>
+              *Mejoramiento y mantenimiento de la Imagen Urbana. 
+              <br>
+              *Llevar a cabo jornadas de reforestación.  </p>  
+              <p>4.- Instalación de recolectores de Residuos Sólidos Urbanos.</p>   
+              <p>5.- Programa de Bacheo de Vías de Comunicación. (Carretera Apaxtla - Teloloapan). </p>    
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!--Fin Modal 5-->
+
+  <!-- Modal 6 -->
+  <div class="modal modal-fade" id="staticBackdrop6" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Gobierno</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="{{ asset('resources/images/gobierno-municipal-modal6.webp') }}" class="img-fluid" alt="Imagen 4" style="width:100%; border-radius: 15px; height:250px;">
+          <div style="padding:10px;">
+            <p>1.- Modernizar y lograr el 100% de cobertura de alumbrado público. </p>
+            <p>2.- Promover la separación de los Residuos Sólidos Urbanos. </p>
+            <p>3.- Revisión y mantenimiento permanente al Sistema de Drenaje y Alcantarillado. </p>
+            <p style="background-color:#F08080">4.- Rescate, mejoramiento y mantenimiento a la infraestructura municipal.  Canchas del Mercado. 
+              <br>
+              *Cancha Pública. 
+              <br>
+              *Gimnasio al Aire Libre. 
+              <br>
+              *Parque Nanchicahuite. 
+              <br>
+              *Mejoramiento y mantenimiento de la Imagen Urbana. 
+              <br>
+              *Llevar a cabo jornadas de reforestación.  </p>  
+              <p>4.- Instalación de recolectores de Residuos Sólidos Urbanos.</p>   
+              <p>5.- Programa de Bacheo de Vías de Comunicación. (Carretera Apaxtla - Teloloapan). </p>    
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!--Fin Modal 6-->  
 
 
 
