@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <link href="https://fonts.googleapis.com/css2?family=Anek+Gujarati&family=Fira+Sans:wght@300&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+
+        .profile-area{
+              padding: 10px 0;
+            }
+        .card{
+              box-shadow: 0 0 30px rgba(0,0,0,5);
+              overflow: hidden;
+              border-radius: 40px;
+            }
+            
+            .img1 img{
+              height: 200px;
+              border-top right radius: 40px;
+              border-top left radius: 40px;
+              width:100%;
+            }
+        
+            .img2 img{
+              position: relative;
+              display: block;
+              margin-left: auto;
+              margin-right: auto;
+              z-index: 1;
+              width: 140px;
+              height: 140px;
+              border-radius: 50%;
+              border: 7px solid #fff;
+            }
+        
+            .card:hover .img2 img{
+              border-color:orange;
+              transition: .7s;
+            }
+        
+            .main-text{
+              padding: 10px 0;
+              text-align: center;
+              font-family: 'Roboto', sans-serif;
+            }
+        
+            .main-text h2{
+              text-transform: uppercase;
+              font-weight: 900;
+              font-size: 20px;
+              font-family: 'Roboto', sans-serif;
+              margin: 0 0 20px;
+            }
+        
+            /*Para efecto de enfoque de las cards*/  
+            .card {
+            margin: 0 5px; /* Margen horizontal para las tarjetas */
+            transition: transform 0.3s ease-in-out; /* Transición suave para el efecto de enfoque */
+          }
+        
+          .card:hover {
+            transform: scale(1.05); /* Aumentar el tamaño de la tarjeta al pasar el mouse */
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Agregar una sombra para el efecto de enfoque */
+          }
+        
+          /*Nosotros*/
+          .header-interno.header-interno-nosotros {
+            height: calc(291.35922px + 34.30421vw);
+        }
+        
+        .header-interno {
+            align-items: center;
+            background: linear-gradient(127deg, #ff4e00 29%, #fd8324 57%);
+            display: flex;
+            height: calc(239.32039px + 16.18123vw);
+        }
+        
+        /*.justify-content-center {
+            justify-content: center !important;
+        }*/
+        
+        /*.row {
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: -15px;
+            margin-right: -15px;
+        }*/
+        /**, :after, :before {
+            box-sizing: border-box;
+        }*/
+        
+        .header-interno_img {
+            height: calc(28.71456px + 14.12945vw);
+            position: relative;
+            width: calc(65.79612px + 31.52104vw);
+        }
+        
+        .header-interno_img-dots {
+            position: absolute;
+            right: calc(21.50485px + 2.26537vw);
+            top: -33px;
+            transform: translateX(-50%);
+            z-index: 2;
+        }
+        .header-interno_img-image {
+            border-radius: calc(17.57282px + .64725vw);
+            height: calc(80.71456px + 14.12945vw);
+            -o-object-fit: cover;
+            object-fit: cover;
+            width: calc(100.79612px + 31.52104vw);
+        }
+        
+        .header-interno_title {
+            -webkit-text-stroke: calc(1.50583px + .05178vw) #fff;
+            color: transparent;
+            font-family: Poppins;
+            font-size: calc(33.25243px + 4.46602vw);
+            font-weight: 700;
+            left: 50%;
+            letter-spacing: calc(-10.55922px + 3.02913vw);
+            line-height: calc(64.2233px + 4.20712vw);
+            position: absolute;
+            text-transform: uppercase;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .header-interno_title:after {
+            content: "";
+            margin-left: calc(10.55922px - 3.02913vw);
+        }
+        *, :after, :before {
+            box-sizing: border-box;
+        }
+        
+        .d-inline-block {
+            display: inline-block !important;
+        }
+        
+        .col-lg-7 {
+            flex: 0 0 58.3333333333%;
+            max-width: 58.3333333333%;
+        }
+        .col-md-8 {
+            flex: 0 0 66.6666666667%;
+            max-width: 66.6666666667%;
+        }
+        
+        
+        /* Movimiento ciudadano letras mensaje*/
+        .pb-3, .py-3 {
+            padding-bottom: 1rem !important;
+        }
+        
+        .pt-3, .py-3 {
+            padding-top: 1rem !important;
+        }
+        
+        .card .img1 img {
+                width: 100%; /* Ajustar el ancho al 100% del contenedor */
+                height: 100%; /* Ajustar el alto al 100% del contenedor */
+                object-fit: cover; /* Mantener la relación de aspecto y ajustar la imagen */
+            }
+        
+           /* Media Query para pantallas pequeñas */
+           @media (max-width: 768px) {
+            .header-interno_img {
+            height: calc(48.71456px + 14.12945vw);
+            position: relative;
+            width: calc(115.79612px + 31.52104vw);
+        }
+            .header-interno_title {
+                    top: 20%;
+                    font-size: 2.5rem; /* Tamaño de fuente más pequeño */
+                    letter-spacing: 0.3rem; /* Espaciado entre letras más pequeño */
+                    line-height: 1.2; /* Altura de línea más pequeña */
+                }
+        
+                .section-title {
+                    text-align: center;
+                    font-size: 1rem; /* Tamaño de fuente más pequeño */
+                    margin-top: 0px; /* Menor margen superior */
+                }
+                .description{
+                  text-align: center;
+                }
+        
+                .banner-info {
+                    padding-top: 20px; /* Mayor espaciado superior */
+                }
+            }
+        
+            </style>
+</head>
+<body>
+    <div class="header-interno header-interno-nosotros">
+        <div class="container-fluid" data-aos="fade-up" data-aos-duration="3000">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-12 text-center d-flex justify-content-center align-items-center">
+                    <div class="header-interno_img">
+                        <img src="{{ asset('resources/images/cmp2.jpg') }}" alt="Nosotros" class="header-interno_img-image" data-aos="fade-up" data-aos-duration="3000">
+                    </div> 
+                    <div class="header-interno_title" class="mt-5" >
+                        Propuestas
+                    </div>
+            </div>
+        </div>
+   
+    <!--Mensaje de movimiento-->
+    
+    <div class="row justify-content-center">
+        <div class="col-lg-9">
+            <div class="banner-info row justify-content-center py-3">
+                <div class="banner-info d-inline-block text-left col-lg-7 col-md-8 col text-white">
+                    <h2 class="section-title d-flex flex-column font-weight-bold mb-md-4 mb-2">
+                        <span class="font-weight-light text-uppercase mb-md-3 mb-1 mt-5 mr-5">Conócenos</span> Movimiento Ciudadano</h2> 
+                        <p class="description">Trabajamos por un Apaxtla en paz, justo e igualitario</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div style="height:160px;">Imagenes de las propuestas</div>
+</body>
+</html>
